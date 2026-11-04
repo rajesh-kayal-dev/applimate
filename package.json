@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Job-application automation: scout open roles, queue them with dedup, auto-fill and submit ATS applications (Ashby / Greenhouse / Lever) driven by a per-user profile.",
   "scripts": {
+    "server:dev": "tsx watch server/src/server.ts",
+    "server:typecheck": "tsc -p server/tsconfig.json --noEmit",
     "setup": "node scripts/setup.js",
     "doctor": "node scripts/doctor.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
@@ -23,8 +25,14 @@
     "node-cron": "^4.2.1"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.3.0",
+    "@types/node": "^26.6.6",
     "concurrently": "^8.2.2",
-    "playwright": "^1.59.1"
+    "playwright": "^1.59.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
   },
   "engines": {
     "node": ">=22.5.0"

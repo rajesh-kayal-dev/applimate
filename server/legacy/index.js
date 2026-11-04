@@ -16,7 +16,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 
-const authMiddleware = require('./middleware/auth');
+const authMiddleware = require('../middleware/auth');
 const { startScoutWatcher } = require('./services/scout_watcher');
 
 if (process.env.NODE_ENV === 'production' && !process.env.APP_PASSWORD) {
